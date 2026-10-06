@@ -1,0 +1,7 @@
+{
+  "name": "VnExpress - Property",
+  "description": "Nền tảng tra cứu hồ sơ dự án bất động sản chuẩn hóa: kiểm tra minh bạch pháp lý, đối chiếu giá thị trường, cảnh báo rủi ro và so sánh dự án chuẩn xác.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

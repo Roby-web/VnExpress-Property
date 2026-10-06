@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Brand Accent - Pressed Rose */
+    --color-accent-rest: #b13460;
+    --color-accent-subdued-surface: rgba(177, 52, 96, 0.1);
+    --color-accent-bright: #df4670;
+    --color-accent-text: #c14872;
+    --color-accent-text-strong: #b13460;
+    --color-accent-surface: #fce6eb;
+
+    /* Support - Muted Steel Blue */
+    --color-support-rest: #466fa1;
+    --color-support-text: #365983;
+    --color-support-surface: #eaf0f8;
+
+    /* Neutral Surfaces */
+    --color-surface-000: #ffffff;
+    --color-surface-paper: #fcfaf6;
+    --color-surface-100: #fafafa;
+    --color-surface-200: #f3f3f3;
+    --color-surface-300: #ececec;
+
+    /* Text Hierarchy */
+    --color-text-strong: #000000;
+    --color-text-regular: #202020;
+    --color-text-regular-lighter: #5f5f5f;
+    --color-text-subdued: #7f7f7f;
+    --color-text-subdued-lighter: #9f9f9f;
+
+    /* Borders */
+    --color-border-subdued-lighter: #f3f3f3;
+    --color-border-subdued: #d6d6d6;
+    --color-border-regular: #9f9f9f;
+    --color-border-strong: #5f5f5f;
+    --color-border-focus: #0590de;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fcfaf6;
+    color: #202020;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* MANDATORY TYPOGRAPHY RULE - PRIORITY #1 */
+  .font-article-title {
+    font-family: 'Merriweather', Georgia, serif;
+    line-height: 1.6;
+  }
+
+  .font-ui {
+    font-family: 'Merriweather Sans', sans-serif;
+    line-height: 1.5;
+  }
+
+  .font-body-content {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+  }
+
+  .font-numeric {
+    font-family: 'Roboto Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* VnExpress Flat System: Flat borders, column rules, no shadows */
+.vne-card {
+  background-color: #ffffff;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+}
+
+.vne-btn-accent {
+  background-color: #b13460;
+  color: #ffffff;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background-color 100ms ease-out;
+}
+.vne-btn-accent:hover {
+  background-color: #932a4e;
+}
+
+.vne-btn-support {
+  background-color: #466fa1;
+  color: #ffffff;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background-color 100ms ease-out;
+}
+.vne-btn-support:hover {
+  background-color: #385b85;
+}
+
+.vne-btn-contained {
+  background-color: #f3f3f3;
+  color: #5f5f5f;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 400;
+  border-radius: 8px;
+  transition: background-color 100ms ease-out;
+}
+.vne-btn-contained:hover {
+  background-color: #e5e5e5;
+  color: #202020;
+}
+
+.vne-btn-ghost {
+  background-color: transparent;
+  color: #5f5f5f;
+  border: 1px solid #d6d6d6;
+  font-family: 'Merriweather Sans', sans-serif;
+  border-radius: 8px;
+  transition: background-color 100ms ease-out;
+}
+.vne-btn-ghost:hover {
+  background-color: rgba(54, 68, 76, 0.08);
+  color: #202020;
+}
+
+/* Custom quiet scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fcfaf6;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d6d6;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9f9f9f;
+}
