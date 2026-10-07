@@ -40,7 +40,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       
       {/* Visual Header with Real Status Overlay */}
       <div className="relative">
-        <ProjectVisual id={project.id} name={project.name} variant="thumb" />
+        <ProjectVisual 
+          id={project.id} 
+          name={project.name} 
+          variant="thumb" 
+          imageUrl={project.imageUrl} 
+        />
 
         {/* Favorite bookmark button */}
         <button
@@ -98,28 +103,29 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
           </div>
 
-          {/* Key metadata line */}
-          <div className="font-body-content flex items-center gap-2 text-xs text-[#5f5f5f] py-1.5 border-y border-[#ececec] my-2.5">
-            <span>{project.propertyType}</span>
-            <span aria-hidden="true" className="text-[#d6d6d6]">|</span>
-            <span>{project.bedroomsRange}</span>
-            <span aria-hidden="true" className="text-[#d6d6d6]">|</span>
-            <span>{project.areaRange}</span>
-            <span aria-hidden="true" className="text-[#d6d6d6]">|</span>
-            <span>CĐT: {project.developer}</span>
+          {/* Key metadata line - Clean & compact */}
+          <div className="font-body-content flex items-center justify-between text-xs text-[#5f5f5f] py-1.5 border-y border-[#ececec] my-2">
+            <span className="truncate max-w-[160px] font-medium text-[#202020]" title={project.developer}>
+              {project.developer}
+            </span>
+            <div className="flex items-center gap-1.5 shrink-0 font-numeric">
+              <span>{project.bedroomsRange}</span>
+              <span className="text-[#d6d6d6]">·</span>
+              <span>{project.areaRange}</span>
+            </div>
           </div>
 
-          {/* Pricing Comparison (F4 & F6 3-Tier prices with Vietnamese decimal comma) */}
-          <div className="bg-[#fafafa] rounded-[4px] p-2.5 my-2.5 border border-[#ececec] space-y-1.5 font-body-content">
+          {/* Pricing Comparison (F4 & F6 3-Tier prices) */}
+          <div className="bg-[#fafafa] rounded-[4px] p-2.5 my-2 border border-[#ececec] space-y-1 font-body-content">
             <div className="flex items-center justify-between text-xs">
-              <span className="text-[#5f5f5f]">Giá thị trường ghi nhận:</span>
+              <span className="text-[#5f5f5f]">Giá thị trường:</span>
               <span className="font-numeric font-bold text-[#202020]">
                 {project.priceTier.recordedTransactionPriceDisplay}
               </span>
             </div>
 
             <div className="flex items-center justify-between text-xs">
-              <span className="text-[#5f5f5f]">Giá chào bán thứ cấp:</span>
+              <span className="text-[#5f5f5f]">Giá chào thứ cấp:</span>
               <div className="flex items-center gap-1.5">
                 <span className="font-numeric font-bold text-[#202020]">
                   {project.priceTier.secondaryAskingPriceDisplay}
@@ -129,7 +135,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 {hasPriceWarning ? (
                   <span 
                     className="inline-flex items-center gap-0.5 text-[11px] font-bold text-[#da1e28] bg-[#f8d4d6] border border-[#da1e28] px-1.5 py-0.5 rounded-[2px] font-numeric"
-                    title={`Giá chào cao hơn giá giao dịch thị trường thực tế ${project.priceGapPercentDisplay}`}
+                    title={`Giá chào cao hơn giá thực tế ${project.priceGapPercentDisplay}`}
                   >
                     <TrendingUp className="w-2.5 h-2.5" />
                     +{project.priceGapPercentDisplay}
@@ -143,9 +149,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
 
             {hasPriceWarning && (
-              <p className="text-xs text-[#da1e28] flex items-center gap-1 pt-0.5 font-body-content">
-                <AlertTriangle className="w-3.5 h-3.5 text-[#da1e28] shrink-0" />
-                <span>Cảnh báo: Giá chào cao hơn giá thị trường trên 5%</span>
+              <p className="text-[11px] text-[#da1e28] flex items-center gap-1 pt-0.5 font-body-content font-medium">
+                <AlertTriangle className="w-3 h-3 text-[#da1e28] shrink-0" />
+                <span>Giá chào cao hơn thị trường trên 5%</span>
               </p>
             )}
           </div>
@@ -168,8 +174,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
 
             <div className="flex items-center justify-between text-xs text-[#5f5f5f]">
-              <span>Sổ sách: {project.ownershipCertificate}</span>
-              <span className="font-numeric">Đối chiếu: {project.verifiedDate.split(',')[1] || project.verifiedDate}</span>
+              <span>{project.ownershipCertificate}</span>
+              <span className="font-numeric">Xác minh: {project.verifiedDate.split(',')[1]?.trim() || project.verifiedDate}</span>
             </div>
 
             {/* Metro & Planning Infrastructure Row */}

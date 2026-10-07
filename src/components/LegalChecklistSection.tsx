@@ -26,15 +26,15 @@ export const LegalChecklistSection: React.FC = () => {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-6">
+        <div className="max-w-3xl mb-5">
           <p className="font-ui text-xs font-bold text-[#b13460] mb-1">
-            Cẩm nang an toàn pháp lý (B3 - P0)
+            Cẩm nang an toàn pháp lý (B3)
           </p>
-          <h2 className="font-article-title text-xl sm:text-2xl md:text-3xl font-bold text-[#202020] leading-snug">
-            Checklist kiểm định pháp lý trước khi đặt cọc mua nhà
+          <h2 className="font-article-title text-xl sm:text-2xl font-bold text-[#202020] leading-snug">
+            Checklist kiểm định pháp lý trước khi đặt cọc
           </h2>
-          <p className="font-body-content text-xs sm:text-sm text-[#5f5f5f] mt-1.5 leading-relaxed">
-            Danh mục tài liệu bắt buộc phải đối chiếu văn bản gốc theo từng loại hình nhà ở, tránh rủi ro mua phải dự án chưa đủ điều kiện huy động vốn.
+          <p className="font-body-content text-xs text-[#5f5f5f] mt-1">
+            Danh mục văn bản bắt buộc đối chiếu bản gốc theo từng loại hình nhà ở.
           </p>
         </div>
 

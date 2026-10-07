@@ -79,6 +79,7 @@ export interface ProjectProfile {
   planning: PlanningInfo;
 
   // Real photos & tags
+  imageUrl: string;
   actualPhotosDate: string;
   summary: string;
   highlights: string[];
@@ -91,6 +92,7 @@ export const REAL_ESTATE_PROJECTS: ProjectProfile[] = [
     id: 'the-metropole',
     name: 'The Metropole Thủ Thiêm',
     developer: 'SonKim Land & Quốc Lộc Phát',
+    imageUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
     listingType: 'buy',
     propertyType: 'Căn hộ thương mại',
     city: 'TP. Hồ Chí Minh',
@@ -168,6 +170,7 @@ export const REAL_ESTATE_PROJECTS: ProjectProfile[] = [
     id: 'masteri-centre-point',
     name: 'Masteri Centre Point',
     developer: 'Masterise Homes',
+    imageUrl: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=1200&q=80',
     listingType: 'buy',
     propertyType: 'Căn hộ thương mại',
     city: 'TP. Hồ Chí Minh',
@@ -244,6 +247,7 @@ export const REAL_ESTATE_PROJECTS: ProjectProfile[] = [
     id: 'lumiere-riverside',
     name: 'Lumière Riverside',
     developer: 'Masterise Homes',
+    imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
     listingType: 'buy',
     propertyType: 'Căn hộ thương mại',
     city: 'TP. Hồ Chí Minh',
@@ -319,6 +323,7 @@ export const REAL_ESTATE_PROJECTS: ProjectProfile[] = [
     id: 'akari-city',
     name: 'Akari City',
     developer: 'Nam Long Group & Hankyu Hanshin (Nhật Bản)',
+    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
     listingType: 'buy',
     propertyType: 'Căn hộ thương mại',
     city: 'TP. Hồ Chí Minh',
@@ -394,6 +399,7 @@ export const REAL_ESTATE_PROJECTS: ProjectProfile[] = [
     id: 'ehome-southgate',
     name: 'EHome Southgate',
     developer: 'Tập đoàn Nam Long & Nishi Nippon Railroad',
+    imageUrl: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80',
     listingType: 'buy',
     propertyType: 'Nhà ở xã hội',
     city: 'TP. Hồ Chí Minh',
@@ -468,6 +474,7 @@ export const REAL_ESTATE_PROJECTS: ProjectProfile[] = [
     id: 'the-matrix-one',
     name: 'The Matrix One',
     developer: 'MIK Group',
+    imageUrl: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80',
     listingType: 'buy',
     propertyType: 'Căn hộ thương mại',
     city: 'Hà Nội',
@@ -536,79 +543,6 @@ export const REAL_ESTATE_PROJECTS: ProjectProfile[] = [
     legalDocs: [
       { id: '1', name: 'Quyết định chủ trương đầu tư', docNumber: '562/QĐ-UBND', issueDate: '1/2019', issuer: 'UBND TP. Hà Nội', status: 'verified' },
       { id: '2', name: 'Giấy phép xây dựng', docNumber: '92/GPXD', issueDate: '8/2019', issuer: 'Sở Xây dựng Hà Nội', status: 'verified' }
-    ]
-  },
-  {
-    id: 'du-an-canh-bao-binh-chanh',
-    name: 'Khu dân cư Hưng Phát Riverside',
-    developer: 'Công ty Cổ phần Đầu tư BĐS Nam Á',
-    listingType: 'buy',
-    propertyType: 'Đất nền',
-    city: 'TP. Hồ Chí Minh',
-    district: 'Huyện Bình Chánh',
-    ward: 'Xã Phong Phú',
-    address: 'Đường Quốc lộ 50, Xã Phong Phú, Huyện Bình Chánh, TP. Hồ Chí Minh',
-    totalPriceText: '1,8 - 2,5 tỷ',
-    totalPriceNumber: 1.8,
-    pricePerM2: 26,
-    pricePerM2Display: '26 triệu/m²',
-    areaRange: '80 - 100 m²',
-    bedroomsRange: 'Đất nền',
-    transparencyScore: 32,
-    legalStatus: 'Có cảnh báo',
-    riskLevel: 'Cao',
-    riskReason: 'Dự án chưa có quy hoạch chi tiết 1/500, chưa nộp tiền sử dụng đất, UBND Huyện Bình Chánh đã ban hành văn bản cảnh báo giao dịch.',
-    verifiedDate: 'Thứ tư, 2/9/2026, 16:00 (GMT+7)',
-    verifiedSource: 'Văn bản số 1842/UBND-QLĐT Huyện Bình Chánh',
-    ownershipCertificate: 'Chưa đủ điều kiện',
-    priceTier: {
-      developerPrice: 28,
-      developerPriceDisplay: '28 triệu/m²',
-      developerNotes: 'Quảng cáo cam kết lợi nhuận 15% mỗi năm không có bảo lãnh tài chính.',
-      secondaryAskingPrice: 26,
-      secondaryAskingPriceDisplay: '26 triệu/m²',
-      recordedTransactionPrice: 19,
-      recordedTransactionPriceDisplay: '19 triệu/m²',
-      sampleCount: 3,
-      period: 'Quý 3/2026',
-      historyQuarters: [
-        { quarter: 'Quý 1/2025', price: 18, priceDisplay: '18' },
-        { quarter: 'Quý 1/2026', price: 19, priceDisplay: '19' },
-        { quarter: 'Quý 3/2026', price: 26, priceDisplay: '26' },
-      ]
-    },
-    priceGapWarning: true,
-    priceGapPercent: 36.8,
-    priceGapPercentDisplay: '36,8%',
-    metroDistance: 'Không gần tuyến metro',
-    highways: 'Quốc lộ 50 đang mở rộng',
-    planningStatus: 'Chưa hoàn thành công tác giải phóng mặt bằng kỹ thuật',
-    deliveryYear: 'Chưa xác định',
-    unitsCount: 180,
-    unitsCountDisplay: '180 lô',
-    scale: '2,3 ha',
-    planning: {
-      zoningCode: 'CLN / CHƯA CHUYỂN MỤC ĐÍCH',
-      zoningName: 'Đất nông nghiệp trồng cây lâu năm - Chưa có quy hoạch 1/500',
-      planDecisionDoc: 'Chưa có quyết định phê duyệt đồ án quy hoạch chi tiết 1/500',
-      approvedScale: 'Chưa phê duyệt quy hoạch',
-      maxFloors: 'Chưa xác định',
-      buildingDensity: 'Chưa thẩm định',
-      floorAreaRatio: 'Chưa có thông tin',
-      setbackLimit: 'Dính quy hoạch mở rộng Quốc lộ 50',
-      roadRedLine: 'Quy hoạch mở rộng Quốc lộ 50 lộ giới 40 m (cắt vào khu đất)',
-      acquisitionRisk: 'Cảnh báo - Chưa giải phóng mặt bằng',
-      planningZoneName: 'Khu đất nông nghiệp xã Phong Phú - Huyện Bình Chánh',
-      zoningColor: '#da1e28'
-    },
-    actualPhotosDate: 'Thứ sáu, 28/8/2026',
-    summary: 'Khu đất nền phân lô bị chính quyền địa phương cắm biển cảnh báo ngăn chặn giao dịch.',
-    highlights: ['Cảnh báo rủi ro pháp lý cao', 'Chưa có phê duyệt quy hoạch 1/500', 'Giá rao bán chênh lệch 36,8% so với thị trường'],
-    cautionNotes: 'UBND Huyện Bình Chánh thông báo dự án chưa đủ điều kiện huy động vốn theo luật định.',
-    legalDocs: [
-      { id: '1', name: 'Quy hoạch chi tiết 1/500', docNumber: 'Chưa có', issueDate: 'Chưa có', issuer: 'Chưa phê duyệt', status: 'missing', notes: 'Chưa nộp hồ sơ tại Sở Quy hoạch - Kiến trúc' },
-      { id: '2', name: 'Giấy phép xây dựng', docNumber: 'Chưa có', issueDate: 'Chưa có', issuer: 'Chưa cấp', status: 'missing' },
-      { id: '3', name: 'Quyết định xử phạt vi phạm hành chính', docNumber: '114/QĐ-XPHC', issueDate: '7/2026', issuer: 'Thanh tra Sở Xây dựng', status: 'warning', notes: 'Xử phạt hành vi huy động vốn khi chưa đủ điều kiện' }
     ]
   }
 ];
@@ -700,6 +634,7 @@ export interface ProjectWarning {
   details: string;
   status: 'Đang xử lý' | 'Đình chỉ mở bán' | 'Khuyến cáo không giao dịch';
   sourceDoc: string;
+  imageUrl: string;
 }
 
 export const OFFICIAL_WARNINGS: ProjectWarning[] = [
@@ -713,7 +648,8 @@ export const OFFICIAL_WARNINGS: ProjectWarning[] = [
     title: 'Dự án chưa có quy hoạch 1/500 nhưng phát sinh hoạt động thu tiền đặt cọc',
     details: 'UBND Xã Phong Phú đã đặt biển cảnh báo khu đất chưa được cơ quan có thẩm quyền phê duyệt phân lô, tách thửa. Người dân không thực hiện các giao dịch đặt cọc giữ chỗ.',
     status: 'Khuyến cáo không giao dịch',
-    sourceDoc: 'Thông báo số 1842/UBND-QLĐT'
+    sourceDoc: 'Thông báo số 1842/UBND-QLĐT',
+    imageUrl: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'w2',
@@ -725,7 +661,8 @@ export const OFFICIAL_WARNINGS: ProjectWarning[] = [
     title: 'Chủ đầu tư tự ý chuyển đổi tầng thương mại thành căn hộ nhỏ để rao bán',
     details: 'Thanh tra Xây dựng quận Hoàng Mai ra quyết định đình chỉ thi công cải tạo sau khi phát hiện chủ đầu tư ngăn chia tầng 3 và tầng 4 thành 48 căn hộ nhỏ trái phép.',
     status: 'Đình chỉ mở bán',
-    sourceDoc: 'Quyết định số 229/QĐ-XPHC'
+    sourceDoc: 'Quyết định số 229/QĐ-XPHC',
+    imageUrl: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'w3',
@@ -737,7 +674,8 @@ export const OFFICIAL_WARNINGS: ProjectWarning[] = [
     title: 'Toàn bộ giấy chứng nhận quyền sử dụng đất dự án đang thế chấp tại ngân hàng',
     details: 'Ngân hàng phát hành văn bản thu hồi nợ quá hạn và yêu cầu phong tỏa tài sản dự án. Chủ đầu tư vẫn ủy quyền cho sàn môi giới thu tiền đặt cọc của khách hàng.',
     status: 'Đang xử lý',
-    sourceDoc: 'Văn bản Trung tâm Giao dịch Bảo đảm'
+    sourceDoc: 'Văn bản Trung tâm Giao dịch Bảo đảm',
+    imageUrl: 'https://images.unsplash.com/photo-1541888946425-d0fbb1861571?auto=format&fit=crop&w=800&q=80'
   }
 ];
 
@@ -750,6 +688,7 @@ export interface NewsItem {
   relatedProjectName?: string;
   summary: string; // Chuẩn Lead: KISS, facts first, active voice, không cảm xúc hoa mỹ
   readTime: string;
+  imageUrl: string;
 }
 
 export const RELATED_NEWS: NewsItem[] = [
@@ -760,7 +699,8 @@ export const RELATED_NEWS: NewsItem[] = [
     source: 'VnExpress Bất động sản',
     date: 'Thứ sáu, 2/10/2026, 07:30 (GMT+7)',
     summary: 'Sở Xây dựng TP HCM vừa duyệt thêm 6 dự án nhà ở hình thành trong tương lai, bổ sung 4.200 căn hộ đủ điều kiện ký hợp đồng mua bán theo quy định mới.',
-    readTime: '3 phút'
+    readTime: '3 phút',
+    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'n2',
@@ -770,7 +710,8 @@ export const RELATED_NEWS: NewsItem[] = [
     date: 'Thứ hai, 28/9/2026, 09:00 (GMT+7)',
     relatedProjectName: 'Lumière Riverside, The Metropole',
     summary: 'Dữ liệu giao dịch công chứng ghi nhận đơn giá căn hộ trong bán kính 500 m quanh các ga Metro tăng 4,5% sau khi tuyến đường sắt đô thị Bến Thành - Suối Tiên vận hành.',
-    readTime: '5 phút'
+    readTime: '5 phút',
+    imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'n3',
@@ -779,6 +720,7 @@ export const RELATED_NEWS: NewsItem[] = [
     source: 'VnExpress Pháp luật',
     date: 'Thứ sáu, 25/9/2026, 08:15 (GMT+7)',
     summary: 'Nhiều người mua nhà bị chiếm dụng vốn khi ký thỏa thuận đặt cọc tại các dự án chưa được phê duyệt quy hoạch chi tiết và chưa có giấy phép xây dựng.',
-    readTime: '4 phút'
+    readTime: '4 phút',
+    imageUrl: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80'
   }
 ];

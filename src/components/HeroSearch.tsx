@@ -139,25 +139,36 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({
   };
 
   return (
-    <section className="pt-8 pb-10 bg-[#fcfaf6] border-b border-[#d6d6d6]">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative pt-10 pb-12 overflow-hidden border-b border-[#d6d6d6]">
+      {/* Background Architectural Atmosphere */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80"
+          alt="Kiến trúc đô thị hiện đại"
+          className="w-full h-full object-cover object-center opacity-30"
+        />
+        {/* Soft Vignette & Editorial Tint */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#fcfaf6]/90 via-[#fcfaf6]/85 to-[#fcfaf6]" />
+      </div>
+
+      <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Editorial Title & Lead following Editor standards */}
+        {/* Editorial Title & Lead following Editor standards - Shortened */}
         <div className="max-w-3xl mx-auto text-center mb-6">
           <p className="font-ui text-xs font-bold text-[#b13460] mb-2 tracking-normal">
-            Dữ liệu đối chiếu độc lập · Sở Xây dựng & Văn phòng Đăng ký Đất đai
+            Dữ liệu độc lập · Sở Xây dựng & Văn phòng Đăng ký Đất đai
           </p>
           
-          <h1 className="font-article-title text-2xl sm:text-3xl md:text-4xl font-bold text-[#202020] leading-snug mb-3">
+          <h1 className="font-article-title text-2xl sm:text-3xl md:text-4xl font-bold text-[#202020] leading-snug mb-2">
             Tra cứu hồ sơ và kiểm định giá bất động sản
           </h1>
 
-          <p className="font-body-content text-sm sm:text-base text-[#5f5f5f] leading-relaxed max-w-2xl mx-auto">
-            Hệ thống bóc tách giá chủ đầu tư, giá chào thứ cấp và giá giao dịch thực tế đối chiếu từ cơ sở dữ liệu công chứng, giúp người mua kiểm tra an toàn pháp lý trước khi xuống tiền.
+          <p className="font-body-content text-sm sm:text-base text-[#5f5f5f] max-w-xl mx-auto">
+            Bóc tách 3 tầng giá và kiểm tra an toàn pháp lý trước khi xuống tiền.
           </p>
 
-          {/* Adjacency Proof Bar with VnExpress flat styling */}
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-y-2 gap-x-5 text-xs text-[#5f5f5f] font-ui border-t border-[#ececec] pt-3">
+          {/* Adjacency Proof Bar */}
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-y-2 gap-x-5 text-xs text-[#5f5f5f] font-ui border-t border-[#d6d6d6]/60 pt-3">
             <span className="flex items-center gap-1.5 text-[#24a148] font-bold">
               <CheckCircle2 className="w-4 h-4 text-[#24a148]" />
               <span>500+ hồ sơ đạt chuẩn</span>

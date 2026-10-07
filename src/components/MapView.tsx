@@ -108,12 +108,6 @@ export const MapView: React.FC<MapViewProps> = ({
       zoneShape: '42,12 55,12 53,24 40,24',
       presetZone: 'metri'
     },
-    'du-an-canh-bao-binh-chanh': { 
-      x: 27, 
-      y: 83, 
-      zoneShape: '21,77 33,77 34,88 22,88',
-      presetZone: 'binhchanh'
-    },
   };
 
   // Filtered projects for search
@@ -252,15 +246,14 @@ export const MapView: React.FC<MapViewProps> = ({
 
           <button
             type="button"
-            onClick={() => setActivePinId('du-an-canh-bao-binh-chanh')}
-            className={`h-6 px-2.5 rounded-[4px] border whitespace-nowrap transition-colors cursor-pointer flex items-center gap-1 ${
-              activePinId === 'du-an-canh-bao-binh-chanh'
-                ? 'bg-[#da1e28] text-white border-[#da1e28] font-bold'
-                : 'bg-[#f8d4d6] text-[#da1e28] border-[#da1e28] hover:bg-[#da1e28] hover:text-white'
+            onClick={() => setActivePinId('ehome-southgate')}
+            className={`h-6 px-2.5 rounded-[4px] border whitespace-nowrap transition-colors cursor-pointer ${
+              activePinId === 'ehome-southgate'
+                ? 'bg-[#b13460] text-white border-[#b13460] font-bold'
+                : 'bg-white text-[#5f5f5f] border-[#d6d6d6] hover:text-[#202020]'
             }`}
           >
-            <AlertTriangle className="w-3 h-3" />
-            <span>Khu Nam - Bình Chánh ⚠️</span>
+            Waterpoint (NOXH)
           </button>
         </div>
       </div>
